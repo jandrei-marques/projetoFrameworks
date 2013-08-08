@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.GeradorController">
+  <children>
+    <Label alignment="CENTER" layoutX="19.0" layoutY="26.0" prefWidth="572.0" text="Gerador de senha Banco UTFPR" textAlignment="CENTER" textFill="#0029ff">
+      <font>
+        <Font name="System Bold" size="18.0" />
+      </font>
+    </Label>
+    <TitledPane animated="false" collapsible="false" layoutX="19.0" layoutY="82.0" text="Senha para caixa">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="279.0">
+          <children>
+            <Label layoutX="21.0" layoutY="22.0" text="Próxima senha:">
+              <font>
+                <Font name="System Bold" size="14.0" fx:id="x1" />
+              </font>
+            </Label>
+            <Label font="$x1" layoutX="21.0" layoutY="57.0" text="Última senha atendida:" />
+            <Label font="$x1" layoutX="21.0" layoutY="94.0" text="Número de operações:" />
+            <Label font="$x1" layoutX="21.0" layoutY="135.0" text="Tempo estimado:" />
+            <Button fx:id="btnGerarSenhaCaixa" font="$x1" layoutX="88.0" layoutY="204.0" mnemonicParsing="false" text="Gerar senha" textAlignment="CENTER" />
+            <Label id="proxSenha" fx:id="lbProxSenha" font="$x1" layoutX="124.0" layoutY="22.0" text="1" />
+            <Label id="proxSenha" fx:id="lbUltAtendimento" font="$x1" layoutX="176.0" layoutY="58.0" text="0" />
+            <Label id="proxSenha" fx:id="lbNumOperacaoCaixa" font="$x1" layoutX="173.0" layoutY="95.0" text="0" />
+            <Label id="proxSenha" fx:id="lbTempoCaixa" font="$x1" layoutX="138.0" layoutY="136.0" text="0" />
+            <Button fx:id="btnMenosOpCaixa" layoutX="185.0" layoutY="95.0" mnemonicParsing="false" text="-" />
+            <Button fx:id="btnMaisOpCaixa" layoutX="211.0" layoutY="95.0" mnemonicParsing="false" text="+" />
+            <CheckBox fx:id="ckPreferencial" font="$x1" layoutX="21.0" layoutY="170.0" mnemonicParsing="false" text="Fila preferencial" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" collapsible="false" layoutX="301.0" layoutY="82.0" text="Senha para atendimento">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="279.0">
+          <children>
+            <Label font="$x1" layoutX="21.0" layoutY="22.0" text="Próxima senha:" />
+            <Label font="$x1" layoutX="21.0" layoutY="57.0" text="Última senha atendida:" />
+            <Label font="$x1" layoutX="21.0" layoutY="94.0" text="Número de operações:" />
+            <Label font="$x1" layoutX="21.0" layoutY="135.0" text="Tempo estimado:" />
+            <Button fx:id="btnGerarSenhaAten" font="$x1" layoutX="88.0" layoutY="204.0" mnemonicParsing="false" text="Gerar senha" textAlignment="CENTER" />
+            <Label id="proxSenha" fx:id="lbProxSenhaAten" font="$x1" layoutX="124.0" layoutY="22.0" text="1" />
+            <Label id="proxSenha" fx:id="lbUltSenhaAten" font="$x1" layoutX="176.0" layoutY="58.0" text="0" />
+            <Label id="proxSenha" fx:id="lbNumOpAten" font="$x1" layoutX="173.0" layoutY="95.0" text="0" />
+            <Label id="proxSenha" fx:id="btnTempoAten" font="$x1" layoutX="138.0" layoutY="136.0" text="0" />
+            <Button fx:id="btnMenosOpAten" layoutX="185.0" layoutY="95.0" mnemonicParsing="false" text="-" />
+            <Button fx:id="btnMaisOpAten" layoutX="211.0" layoutY="95.0" mnemonicParsing="false" text="+" />
+            <CheckBox fx:id="ckPreferencialAten" font="$x1" layoutX="21.0" layoutY="167.0" mnemonicParsing="false" text="Fila preferencial" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>
